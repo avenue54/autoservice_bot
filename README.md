@@ -1,9 +1,9 @@
-git tag# 🚗 AutoService Telegram Bot
+# 🚗 AutoService Telegram Bot
 
 
 <p align="center">
-  <a href="#-english">🇬🇧 English</a> •
-  <a href="#-русский">🇷🇺 Русский</a>
+  <a href="#-english">English</a> •
+  <a href="#-русский">Русский</a>
 </p>
 
 
