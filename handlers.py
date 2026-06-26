@@ -32,7 +32,7 @@ async def process_name(message: Message, state: FSMContext):
 async def process_phone(message: Message, state: FSMContext):
     await state.update_data(phone=message.text)  # сохраняем номер телефона
     await state.set_state(OrderForm.waiting_for_car_model)
-    await message.answer("Модель вашего автомобиля?")
+    await message.answer("Марка и модель вашего автомобиля?")
     
 @router.message(OrderForm.waiting_for_car_model)
 async def process_car_model(message: Message, state: FSMContext):
