@@ -102,12 +102,19 @@ autoservice_bot/
 │
 
 ├── bot.py
+
 ├── handlers.py
+
 ├── database.py
+
 ├── config.py
+
 ├── .env
+
 ├── .gitignore
+
 ├── requirements.txt
+
 └── README.md
 
 ---
@@ -201,13 +208,21 @@ python bot.py
 autoservice_bot/
 
 │
+
 ├── bot.py
+
 ├── handlers.py
+
 ├── database.py
+
 ├── config.py
+
 ├── .env
+
 ├── .gitignore
+
 ├── requirements.txt
+
 └── README.md
 
 ---
