@@ -7,6 +7,8 @@ from aiogram.types import Message, ReplyKeyboardRemove, ReplyKeyboardMarkup, Key
 from config import OWNER_ID
 from aiogram import F
 import re
+from database import save_request
+
 
 router = Router()
 
@@ -70,6 +72,13 @@ async def process_problem(message: Message, state: FSMContext):
     await state.update_data(problem=message.text)
     
     data = await state.get_data()
+    
+    await save_request(
+    name=data['name'],
+    phone=data['phone'],
+    brand=data['car_model'],
+    problem=data['problem']
+    )
     
     order_text = (
         f"📋 Новая заявка!\n\n"

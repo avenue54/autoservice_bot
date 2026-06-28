@@ -6,7 +6,7 @@ from config import BOT_TOKEN
 from aiogram.filters import Command
 from handlers import router
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
-
+from database import init_db
 
 
 session = AiohttpSession(proxy="http://127.0.0.1:10809")
@@ -24,6 +24,7 @@ async def cmd_start(message):
         "Нажмите на кнопку ниже, чтобы начать запонять заявку.", reply_markup=keyboard)
 
 async def main():
+    await init_db()
     dp.include_router(router)
     await dp.start_polling(bot)
 
